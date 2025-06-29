@@ -69,9 +69,7 @@ const App = () => (
                   path="/chat" 
                   element={
                     <ProtectedRoute>
-                      <div className="h-screen">
-                        <ChatSelection />
-                      </div>
+                      <ChatSelection />
                     </ProtectedRoute>
                   } 
                 />
