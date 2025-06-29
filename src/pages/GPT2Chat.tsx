@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, Plus, Menu, X, Bot, User, ArrowLeft } from 'lucide-react';
+import { Send, Plus, Menu, X, Bot, User, ArrowLeft, MessageSquare } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Button from '@/components/Button';
 import { useAuth } from '@/contexts/AuthContext';

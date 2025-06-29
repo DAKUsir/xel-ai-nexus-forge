@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, Plus, Menu, X, Bot, User, ArrowLeft, Flask } from 'lucide-react';
+import { Send, Plus, Menu, X, Bot, User, ArrowLeft, Beaker } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Button from '@/components/Button';
 import { useAuth } from '@/contexts/AuthContext';
@@ -244,7 +244,7 @@ const TestingChat = () => {
             <div className="flex items-center justify-center h-full">
               <div className="text-center max-w-md p-8">
                 <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Flask size={24} className="text-white" />
+                  <Beaker size={24} className="text-white" />
                 </div>
                 <h2 className="text-2xl font-bold mb-2">Testing Model</h2>
                 <p className="text-muted-foreground">Experimental AI model for testing new features and capabilities. Help us improve by sharing your feedback!</p>
@@ -259,7 +259,7 @@ const TestingChat = () => {
                       message.role === 'assistant' ? 'bg-purple-500' : 'bg-secondary'
                     }`}>
                       {message.role === 'assistant' ? (
-                        <Flask size={16} className="text-white" />
+                        <Beaker size={16} className="text-white" />
                       ) : (
                         <User size={16} className="text-secondary-foreground" />
                       )}
@@ -286,7 +286,7 @@ const TestingChat = () => {
                 <div className="py-6 px-4 bg-muted/20">
                   <div className="flex items-start space-x-4">
                     <div className="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center flex-shrink-0">
-                      <Flask size={16} className="text-white" />
+                      <Beaker size={16} className="text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center space-x-2 mb-2">

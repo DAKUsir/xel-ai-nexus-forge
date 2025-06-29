@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Bot, Shield, MessageSquare, Code, Flask } from 'lucide-react';
+import { Bot, Shield, MessageSquare, Code, Beaker } from 'lucide-react';
 import Button from '@/components/Button';
 
 const models = [
@@ -33,7 +33,7 @@ const models = [
     id: 'testing',
     name: 'Testing Model',
     description: 'Experimental testing model',
-    icon: Flask,
+    icon: Beaker,
     route: '/chat/testing',
     color: 'bg-purple-500',
   },
