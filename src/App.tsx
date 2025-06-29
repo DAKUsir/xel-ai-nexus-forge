@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -11,7 +12,11 @@ import ProtectedRoute from "@/components/ProtectedRoute";
 
 import Home from "@/pages/Home";
 import AuthPage from "@/pages/AuthPage";
-import Chat from "@/pages/Chat";
+import ChatSelection from "@/pages/ChatSelection";
+import SpamDetectorChat from "@/pages/SpamDetectorChat";
+import GPT2Chat from "@/pages/GPT2Chat";
+import InterpreterChat from "@/pages/InterpreterChat";
+import TestingChat from "@/pages/TestingChat";
 import Dashboard from "@/pages/Dashboard";
 import Community from "@/pages/Community";
 import NotFound from "@/pages/NotFound";
@@ -65,7 +70,47 @@ const App = () => (
                   element={
                     <ProtectedRoute>
                       <div className="h-screen">
-                        <Chat />
+                        <ChatSelection />
+                      </div>
+                    </ProtectedRoute>
+                  } 
+                />
+                <Route 
+                  path="/chat/spam-detector" 
+                  element={
+                    <ProtectedRoute>
+                      <div className="h-screen">
+                        <SpamDetectorChat />
+                      </div>
+                    </ProtectedRoute>
+                  } 
+                />
+                <Route 
+                  path="/chat/gpt-2" 
+                  element={
+                    <ProtectedRoute>
+                      <div className="h-screen">
+                        <GPT2Chat />
+                      </div>
+                    </ProtectedRoute>
+                  } 
+                />
+                <Route 
+                  path="/chat/interpreter" 
+                  element={
+                    <ProtectedRoute>
+                      <div className="h-screen">
+                        <InterpreterChat />
+                      </div>
+                    </ProtectedRoute>
+                  } 
+                />
+                <Route 
+                  path="/chat/testing" 
+                  element={
+                    <ProtectedRoute>
+                      <div className="h-screen">
+                        <TestingChat />
                       </div>
                     </ProtectedRoute>
                   } 
@@ -76,7 +121,7 @@ const App = () => (
             </main>
             {/* Only show footer on non-chat pages */}
             <Routes>
-              <Route path="/chat" element={null} />
+              <Route path="/chat/*" element={null} />
               <Route path="*" element={<Footer />} />
             </Routes>
           </div>
